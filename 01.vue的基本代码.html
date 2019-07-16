@@ -5,6 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-
+<div id="app">
+    <p>{{ msg }}</p>
+</div>
+<!-- 1.引入vue包 -->
+<script src="lib/vue.js"></script>
+<script>
+    <!--2. 创建一个vue的实例-->
+    // 当我们导入包之后，在浏览器的内存中，就多了一个 Vue 构造函数
+    var vm = new Vue({
+        el: '#app', // 表示当我们new 这个Vue 实例，要控制页面上的哪个区域
+        data: { // data 属性中，存放的是 el 中要用到的数据
+            msg: "欢迎学习Vue" // 通过Vue提供的指令，很方便的就能把数据渲染到页面上，
+            // 程序员不需要手动操作DOM元素
+        }
+    })
+</script>
 </body>
 </html>
