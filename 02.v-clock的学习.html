@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/Vue.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <p v-cloak>{{ msg }}</p>
+    </div>
+
+<script>
+    <!--v-clock 的作用是隐藏未编译的 Mustache 标签-->
+    var vm = new Vue({
+        el: ".app",
+        data: {
+            msg: "v-clock指令的学习"
+        }
+
+    })
+
+</script>
+
+</body>
+</html>
