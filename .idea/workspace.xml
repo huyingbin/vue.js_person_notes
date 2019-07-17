@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2f7dbd1-5a77-42ef-bdd1-c8cf0bd710d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02.v-clock的学习.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/03.v-text的学习.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/v-html的学习.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/04.v-bind指令的学习.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01.vue的基本代码.html" afterPath="$PROJECT_DIR$/01.vue的基本代码.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,11 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="v-html的学习.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="v-html的学习.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/v-html的学习.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
               <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="04.v-bind指令的学习.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/04.v-bind指令的学习.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -72,6 +79,7 @@
         <option value="$PROJECT_DIR$/01.vue的基本代码.html" />
         <option value="$PROJECT_DIR$/03.v-text的学习.html" />
         <option value="$PROJECT_DIR$/v-html的学习.html" />
+        <option value="$PROJECT_DIR$/04.v-bind指令的学习.html" />
       </list>
     </option>
   </component>
@@ -89,8 +97,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="82" />
+    <option name="x" value="-163" />
+    <option name="y" value="27" />
     <option name="width" value="1120" />
     <option name="height" value="724" />
   </component>
@@ -167,15 +175,15 @@
       <option name="presentableId" value="Default" />
       <updated>1563195821513</updated>
       <workItem from="1563195825973" duration="4160000" />
-      <workItem from="1563323537829" duration="2811000" />
+      <workItem from="1563323537829" duration="3655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6971000" />
+    <option name="totallyTimeSpent" value="7815000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="82" width="1120" height="724" extended-state="0" />
+    <frame x="-163" y="27" width="1120" height="724" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30209282" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -255,6 +263,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04.v-bind指令的学习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           <folding />
         </state>
       </provider>

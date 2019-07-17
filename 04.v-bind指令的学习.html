@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/Vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--v-bind 指令用于绑定标签属性，给属性绑定变量-->
+    <input type="button" value="提交" v-bind:title="msg">
+    <input type="button" value="提交" :title="msg">
+    <input type="button" value="提交" :title="msg+'123'">
+
+</div>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data:{
+            msg: "hyb自定义标签"
+        }
+    })
+
+</script>
+</body>
+</html>
