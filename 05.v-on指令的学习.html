@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/Vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{ msg }}</p>
+        <!--操作DOM监听事件-->
+        <input type="button" value="操作DOM监听事件" id="DOM">
+
+
+        <!--使用vue的v-on指令监听事件, 避免了操作dom元素，仅仅只需要一个指令就行。也可以缩写-->
+        <input type="button" value="使用vue的v-on指令监听事件" @click="clickThis">
+
+        <!--使用vue的v-on指令监听鼠标移开事件-->
+        <input type="button" value="使用vue的v-on指令监听鼠标移开事件" @mouseover="clickThis">
+
+
+
+    </div>
+<script>
+   var vm = new Vue({
+        // 这里绑定的标签一定要注意，如果绑定错了，不会报错，事件什么都不会运行
+       el: "#app",
+       data:{
+           msg : "v-on"
+
+       },
+       methods:{
+           clickThis:function () {
+               alert("使用vue的v-on指令监听事件");
+           }
+
+
+       }
+   })
+    document.getElementById("DOM").onclick = function () {
+       alert("操作DOM监听事件");
+    }
+</script>
+</body>
+</html>
