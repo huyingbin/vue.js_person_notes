@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue中样式_class</title>
+    <style>
+        .color {
+            color: blue;
+        }
+
+        .style {
+            font-style: italic
+        }
+
+        .weight{
+            font-weight: bold;
+        }
+
+        .active{
+            letter-spacing: 1em;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--不使用vue时样式绑定方式-->
+    <h3 class="color style weight active">vue中样式的学习_class。</h3>
+
+    <!--1. 第一种方式：使用v-bind指令传递class属性数组变量  如果不加判断条件的话不常用！！！！ -->
+    <h3 :class="['weight','color']">使用数组方式绑定class样式</h3>
+
+    <!--在数组中使用三目表达式，判断是否有某个class-->
+    <h3 :class="['weight','color', flag?'active':'']">使用数组方式绑定class样式，并且使用三目表达式</h3>
+
+    <!--在数组中使用对象来替代三目表达式，判断是否有某个class-->
+    <h3 :class="['weight','color', {'active':flag}]">使用数组方式绑定class样式，并且使用对象</h3>
+
+
+    <!--2. 第二种方式：使用v-bind指令传递class属性对象 ,对象的属性是类名，由于 对象属性可带也可
+    不带引号，所以在这里没写
+    -->
+    <h3 :class="{color:true, active:true}">使用数组方式绑定class样式，并且使用对象</h3>
+
+    <h3 :class="classObj">放到data中</h3>
+
+
+
+
+</div>
+<script src="./lib/Vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            flag:true,
+            classObj:{color:true,active:true}
+        }
+    })
+</script>
+</body>
+</html>

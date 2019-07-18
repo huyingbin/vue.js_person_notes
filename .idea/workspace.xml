@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2f7dbd1-5a77-42ef-bdd1-c8cf0bd710d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/08.v-model与简易计算器.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09.vue中样式_class.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="07.事件修饰符.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/07.事件修饰符.html">
+      <file leaf-file-name="09.vue中样式_class.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/09.vue中样式_class.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="931">
+              <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -33,18 +33,8 @@
       <file leaf-file-name="04.v-bind指令的学习.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/04.v-bind指令的学习.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="08.v-model与简易计算器.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/08.v-model与简易计算器.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="246">
+              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -77,6 +67,7 @@
         <option value="$PROJECT_DIR$/06.跑马灯效果.html" />
         <option value="$PROJECT_DIR$/07.事件修饰符.html" />
         <option value="$PROJECT_DIR$/08.v-model与简易计算器.html" />
+        <option value="$PROJECT_DIR$/09.vue中样式_class.html" />
       </list>
     </option>
   </component>
@@ -170,12 +161,12 @@
       <option name="presentableId" value="Default" />
       <updated>1563195821513</updated>
       <workItem from="1563195825973" duration="4160000" />
-      <workItem from="1563323537829" duration="18372000" />
+      <workItem from="1563323537829" duration="21178000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22532000" />
+    <option name="totallyTimeSpent" value="25338000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -321,10 +312,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/04.v-bind指令的学习.html">
+    <entry file="file://$PROJECT_DIR$/08.v-model与简易计算器.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="285">
+          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -337,10 +328,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/08.v-model与简易计算器.html">
+    <entry file="file://$PROJECT_DIR$/04.v-bind指令的学习.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="246">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09.vue中样式_class.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
           <folding />
         </state>
       </provider>
