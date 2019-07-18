@@ -1,0 +1,67 @@
+<!--1. 如何定义一个基本的Vue代码结构-->
+<!--2. 插值表达式和v-text-->
+<!--3. v-clock-->
+<!--4. v-html-->
+<!--5. v-bind Vue提供的属性绑定机制 缩写是 :-->
+<!--6. v-on Vue提供的事件绑定机制 缩写是 @-->
+
+<!--
+跑马灯思路
+1.获取字符串变量（如何获取？）
+2.截取字符串第一个字，截取字符串其他字符，将第一个字拼接到最后
+3.增加定时器（this问题）
+4.停止时 去除定时器（定时器置null）
+
+
+对于data的数据，vue有监听，当值变化时，会被监听到
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/Vue.js"></script>
+    <style>
+        .title{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="浪起来" @click = "moving">
+        <input type="button" value="低调" @click = "stopping">
+        <div class="title">{{ msg }}</div>
+    </div>
+
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            msg: "猥琐发育，别浪~~！",
+            time: null
+        },
+        methods: {
+            moving:function () {
+                if(this.time != null) return;
+                var _this = this;
+                _this.time = setInterval(function () {
+                    var msgStr =  _this.msg;
+                    var startChar = msgStr.slice(0,1);
+                    var othersStr = msgStr.slice(1);
+                    var newStr = othersStr + startChar;
+                    _this.msg = newStr;
+                }, 1000);
+
+            },
+            stopping:function () {
+                clearInterval(this.time);
+                this.time = null;
+            }
+        }
+    })
+</script>
+</body>
+</html>
