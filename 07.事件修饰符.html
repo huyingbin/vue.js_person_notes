@@ -1,0 +1,92 @@
+<!--1.stop:阻止冒泡，用在某个元素上，就会阻止事件流冒泡，停留到这里-->
+<!--2.prevent 阻止默认事件-->
+<!--3.capture 捕获机制 -->
+<!--4.self 触发元素时才触发回调-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .first {
+            background-color: red;
+            padding: 50px;
+        }
+
+        .two {
+            background-color: greenyellow;
+            padding: 20px;
+
+        }
+
+        .three {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+        }
+        hr{
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="first" @click.capture="clickFirst">1
+        <div class="two" @click.stop="clickTwo">2
+            <div class="three" @click="clickThree">
+                3
+            </div>
+        </div>
+    </div>
+
+
+
+    <a href="https://www.baidu.com/" @click.prevent = "defautEvent">百度一下</a>
+
+
+    <div class="first" @click="clickFirst">1
+        <div class="two" @click.capture="clickTwo">2
+            <div class="three" @click="clickThree">
+                3
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="first" @click="clickFirst">1
+        <div class="two" @click.self="clickTwo">2
+            <div class="three" @click="clickThree">
+                3
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="./lib/Vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        methods:{
+            clickThree:function () {
+                console.log("clickThree_3");
+
+            },
+            clickTwo:function () {
+                console.log("clickTwo_2");
+
+            },
+            clickFirst:function () {
+                console.log("clickFirst_1");
+            },
+            defautEvent:function () {
+                console.log("默认跳转");
+
+            }
+        }
+
+    })
+</script>
+</body>
+</html>
