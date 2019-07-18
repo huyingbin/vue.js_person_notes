@@ -1,0 +1,66 @@
+<!--
+v-model 指令用来在 input、select、textarea、checkbox、radio
+等表单控件元素上创建双向数据绑定，根据表单上的值，自动更新绑定的元素的值。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-model与简易计算器</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="number1">
+
+    <select v-model="opt">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <input type="text" v-model="number2">
+
+    <input type="button" value="=" @click="opera">
+
+    <input type="text" v-model="result">
+
+
+</div>
+<script src="./lib/Vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data:{
+            number1: 0,
+            number2: 0,
+            opt:"-",
+            result:0
+
+        },
+        methods:{
+            opera:function () {
+                var opearator = this.opt;
+                switch (opearator){
+                    case "+":
+                        this.result = Number(this.number1) + Number(this.number2);
+                        break;
+                    case "-":
+                        this.result = this.number1 - this.number2;
+                        break;
+                    case "*":
+                        this.result = this.number1 * this.number2;
+                        break;
+                    default:
+                        this.result = this.number1 / this.number2;
+
+                }
+
+            }
+
+        }
+    })
+
+</script>
+</body>
+</html>
