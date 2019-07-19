@@ -1,0 +1,56 @@
+<!--1.v-for循环普通数组-->
+<!--2.v-for循环对象-->
+<!--3.v-for循环数字-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for指令的学习</title>
+</head>
+<body>
+<div id="app">
+    <div>--------------------1_1.1 v-for循环普通数组----------------------</div>
+    <!-- 这样写有点垃圾啊-->
+    <p>{{items[0]}}</p>
+    <p>{{items[1]}}</p>
+    <p>{{items[2]}}</p>
+    <p>{{items[3]}}</p>
+
+    <p v-for="item in items">{{ item }}</p>
+
+    <!--value和index值,前边是值后边是索引-->
+    <p v-for="(item,index) in items">item: {{item}},index:{{index}}</p>
+
+    <div>--------------------1_1.2 v-for循环对象数组----------------------</div>
+    <p v-for="(obj,index) in objList">id号:{{obj.id}}，name名字：{{obj.name}}，index索引：{{index}}</p>
+
+
+    <div>--------------------2.v-for循环对象----------------------</div>
+    <p v-for="(key, value) in user">键值key:{{ key }},值value为：{{value}}</p>
+        <!--增加每个键值对的索引index,这个一般不用-->
+        <p v-for="(key, value, index) in user">键值key:{{ key }},值value为：{{value}},索引index为：{{index}}</p>
+
+
+    <div>--------------------3.v-for循环数字----------------------</div>
+    <!--从1开始遍历-->
+    <p v-for="count in 10">{{count}}</p>
+
+</div>
+<script src="./lib/Vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            items:[99, 34, 2, 10],
+            objList:[{id:89, name:"hyb"},{id:90,name:"zzt"},{id:91,name:"wxj"},{id:92,name:"hyc"}],
+            user: {
+                name: "hyb",
+                gender: "男",
+                birthPlace:"河南商丘"
+            }
+        },
+        methods:{}
+    })
+</script>
+</body>
+</html>
