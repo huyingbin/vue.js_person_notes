@@ -1,0 +1,40 @@
+<!--
+共同点：
+    用于元素的显示和隐藏
+
+不同点：
+    v-show：当隐藏元素时，对样式的display属性设置none
+    v-if：当隐藏元素时，直接删除该元素
+
+用法说明：
+    当元素隐藏和显示操作比较多时，使用v-show
+    当元素极有可能不会被初始化时，使用v-if，不会初始渲染
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-show与v-if指令的学习</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" @click="toggle" value="显示和隐藏">
+    <h3 v-show="flag">使用v-show进行显隐性的控制。</h3>
+    <h3 v-if="flag">使用v-if进行显隐性的控制。</h3>
+</div>
+<script src="./lib/Vue.js"></script>
+<script>
+    var vm = new Vue({
+       el: "#app",
+        data:{
+           flag:true
+        },
+        methods:{
+            toggle:function () {
+               this.flag = !this.flag;
+            }
+        }
+    })
+</script>
+</body>
+</html>
