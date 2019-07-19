@@ -1,0 +1,51 @@
+<!--可参考链接：https://www.jianshu.com/p/4bd5e745ce95-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for指令中的key问题</title>
+</head>
+<body>
+<div id="app">
+    <div>----------没增加key-------------</div>
+    <input type="text" v-model="id">
+    <input type="text" v-model="name">
+    <input type="button" value="增加" @click="add">
+    <p v-for="(list,index) in lists">
+        <input type="checkbox">id:{{list.id}}，name:{{list.name}}
+    </p>
+
+
+    <div>----------增加key-------------</div>
+    <input type="text" v-model="id">
+    <input type="text" v-model="name">
+    <input type="button" value="增加" @click="add">
+    <p v-for="(list,index) in lists" :key="list.id">
+        <input type="checkbox">id:{{list.id}}，name:{{list.name}}
+    </p>
+
+</div>
+<script src="./lib/Vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data:{
+            id:null,
+            name:null,
+            lists:[
+                {id:1,name:"李斯"},
+                {id:2,name:"秦始皇"},
+                {id:3,name:"孙冰"},
+                {id:4,name:"吕不韦"}
+            ]
+        },
+        methods:{
+            add:function () {
+                this.lists.unshift({id:this.id,name:this.name});
+
+            }
+        }
+    })
+</script>
+</body>
+</html>
