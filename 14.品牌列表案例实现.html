@@ -42,7 +42,7 @@
             <td>{{car.id}}</td>
             <td v-text="car.name"></td>
             <td v-text="car.createTime"></td>
-            <td><a href="#">{{car.Operation}}</a></td>
+            <td><a href="#" @click="del(car.id)">{{car.Operation}}</a></td>
         </tr>
         </tbody>
     </table>
@@ -72,6 +72,25 @@
 //                输入框为空
                 this.id = '';
                 this.name = '';
+
+            },
+            del(id){
+//                1.根据id找到相应对象
+//                2.从数组中删除该对象
+//                this.carLists.some((car,i)=>{
+//                    if(car.id == id){
+//                        this.carLists.splice(i,1);
+//                        return true;
+//                    }
+//                })
+
+                var index = this.carLists.findIndex((car)=>{
+                    if(car.id == id){
+                        return true;
+                    }
+                });
+                this.carLists.splice(index,1);
+
 
             }
         }
