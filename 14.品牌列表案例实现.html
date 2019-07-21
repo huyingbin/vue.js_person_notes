@@ -24,6 +24,11 @@
 
             <input type="button" value="增加" class="btn btn-primary" @click="add()">
 
+            <label>
+                根据关键词搜索:
+                <input type="text" v-model="keyWord">
+            </label>
+
 
         </div>
     </div>
@@ -38,7 +43,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="car in carLists" :key="car.id">
+        <tr v-for="car in search(keyWord)" :key="car.id">
             <td>{{car.id}}</td>
             <td v-text="car.name"></td>
             <td v-text="car.createTime"></td>
@@ -50,11 +55,13 @@
 </div>
 <script src="./lib/Vue.js"></script>
 <script>
+    Vue.config.devtools = true;
     var vm = new Vue({
         el: "#app",
         data: {
             id:'',
             name:'',
+            keyWord:'',// 根据关键词搜索
             carLists:[
                 {id:1,name:"大众",createTime:new Date(),Operation:"删除"},
                 {id:2,name:"奥拓",createTime:new Date(),Operation:"删除"}
@@ -91,6 +98,28 @@
                 });
                 this.carLists.splice(index,1);
 
+            },
+            search:function (keyword) {
+//                1.遍历全部数据
+//                2.判断包括keyword的对象
+//                3. 返回符合对象的数组
+//                var newList = []
+//                this.carLists.forEach(function (car) {
+//                    if(car.name.indexOf(keyword)!=-1){
+//                        newList.push(car)
+//                    }
+//
+//                })
+//                return newList;
+
+//                filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。
+                return this.carLists.filter((car)=>{
+//在ES6中，为字符串提供一个新的方法，String.prototype.includes('要包含合法的字符串')，如果包含就返回true,
+//                    如果不包含返回false
+                    if(car.name.includes(keyword)){
+                        return car;
+                    }
+                });
 
             }
         }
