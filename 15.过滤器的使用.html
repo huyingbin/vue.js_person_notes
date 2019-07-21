@@ -1,0 +1,42 @@
+<!--
+Vue中允许自定义过滤器，常用于文本字体的格式化，过滤器可用在两个地方：mustachc插值和v-bind表达式。
+过滤器应该添加到js表达式的尾部，由"管道"符表示。
+过滤器的调用的格式：{{data|过滤器1(参数)|过滤器2(参数)}}
+全局过滤器的定义语法：Vue.filter(过滤器名,function(参数){})
+过滤器中的function，第一个参数是管道符前面传递过来的数据
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器的使用</title>
+</head>
+<body>
+<div id="app">
+    <!--过滤器传参-->
+<p>{{msg|changePure("邪恶11")}}</p>
+    <!--多个过滤器-->
+<p>{{msg|changePure("邪恶11")|add123}}</p>
+</div>
+<script src="./lib/Vue.js"></script>
+<script>
+    <!--定义changePure过滤器-->
+    Vue.filter('changePure',function (data,replaceWord) {
+        return data.replace(/单纯/g,replaceWord);
+    });
+
+    Vue.filter('add123',function (data) {
+        return data+'123';
+    })
+
+
+   var vm = new Vue({
+       el: "#app",
+       data:{
+           msg: "曾经我是一个单纯的boy,单纯的以为自己是个superman"
+       },
+       methods:{}
+   })
+</script>
+</body>
+</html>
