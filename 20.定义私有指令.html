@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定义私有指令</title>
+</head>
+<body>
+<div id="app">
+    <p v-color="'red'">定义私有指令</p>
+</div>
+<script src="./lib/Vue.js"></script>
+<script>
+    var el = new Vue({
+        el: "#app",
+        data:{},
+        methods:{},
+        filters:{},
+        directives:{
+            color:function (el,binding) {
+                el.style.color=binding.value;
+
+            }
+        }
+    })
+</script>
+</body>
+</html>

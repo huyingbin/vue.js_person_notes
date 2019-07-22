@@ -28,7 +28,7 @@
 
             <label>
                 根据关键词搜索:
-                <input type="text" v-model="keyWord" v-focus>
+                <input type="text" v-model="keyWord" v-focus v-color="'green'">
             </label>
 
 
@@ -82,6 +82,17 @@
 //
 //        }
     });
+
+    Vue.directive('color',{
+//        样式，只要指令绑定了元素，不管这个元素有没有插到dom中，都可以显示
+        bind:function (el, binding) {
+            console.log(binding.name);
+            console.log(binding.value);
+            console.log(binding.expression);
+            el.style.color=binding.value;
+
+        }
+    })
     <!--自定义全局按键修饰符-->
     Vue.config.keyCodes.F2 = 113;
     Vue.filter('dateFormat',function (date) {
