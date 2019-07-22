@@ -1,0 +1,91 @@
+<!--
+什么是生命周期：从Vue实例创建、运行到销毁期间，总是伴随各种各样的事件，这些事件，统称为生命周期
+生命周期钩子就是生命周期的别名
+生命周期钩子=生命周期函数=生命周期事件
+生命周期的分类：
+    创建期间的生命周期函数：
+        beforeCreate:实例刚在内存中被创建出来，此时还没初始化好  data 和 methods
+        created:实例在内存中创建ok,此时data和methods已经创建ok,此时还没有编译模板
+        beforeMount:此时已完成模板的编译，但是还没挂载到页面中
+        mounted:此时已经将编译好的模板，挂载到指定的容器中显示
+    运行期间的生命周期函数：
+        beforeUpdate:状态更新之前执行此函数，此时data中的状态值是最新的，但是界面上显示的数据是旧的
+        因为此时还没有重新渲染dom节点
+        updated:实例更新完成之后调用此函数，此时data中的数值和界面上显示的数值，
+        都已经完成了更新，界面已经重新渲染好了
+    销毁期间的生命周期：
+        beforeDestroy:实例销毁之前调用，在这一步中，实例仍然可用
+        destroyed:Vue实例销毁后调用，调用后，Vue实例指示的所有东西都会被解绑定，所有事件监听器都会被移除，
+        所有子实例会被销毁。
+
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue的生命周期函数</title>
+
+</head>
+<body>
+<div id="app">
+    <input type="button" value="更改" @click="change">
+    <p id="beforeMount">{{msg}}</p>
+</div>
+<script src="./lib/Vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            msg: "生命周期函数"
+        },
+        methods:{
+            sayHello:function () {
+              console.log("sayHello");
+            },
+            change:function () {
+                this.msg="更改后的值";
+            }
+        },
+//        第一个周期函数，表示实例在完全被创建出来之前，会执行它
+        beforeCreate:function () {
+//            console.log(this.msg);
+//            this.sayHello();
+//            在beforeCreate生命周期函数执行时，data中的数据和methods中的方法并没有被初始化
+        },
+//        第二个生命周期函数，data和methods中的方法都被初始化完成
+        created:function () {
+//            console.log(this.msg);
+//            this.sayHello();
+//            如果要操作data中的数据和调用methods的方法，最早只能在这个方法中调用。
+        },
+//        第三个生命周期函数 模板在内存中编译完成并没有挂载到页面上
+        beforeMount:function () {
+//            console.log(document.getElementById("beforeMount").innerText);
+//            在执行beforeMount的时候，页面中的元素并没有真正替换过来，只是之前写的一些模板字符串
+
+        },
+//        第三个生命周期函数，表明内存中编译好的模板已经挂载到页面中，用户可以看到渲染好的页面
+        mounted:function () {
+//            console.log(document.getElementById("beforeMount").innerText);
+//            mounted是实例穿件期间最后一个生命周期函数，执行mounted表示实例已经完全创建好了
+        },
+//        第四个生命周期函数
+        beforeUpdate:function () {
+//            console.log("页面上的数据:"+document.getElementById("beforeMount").innerText);
+//            console.log("更新的数据:"+this.msg);
+//            页面上显示的数据是旧的，data中的数据是最新的，页面尚未和最新的数据保持同步
+
+        },
+//        第五个生命周期函数
+        updated:function () {
+            console.log("页面上的数据:"+document.getElementById("beforeMount").innerText);
+            console.log("更新的数据:"+this.msg);
+//            页面和data中的数据已经同步，都是最新的
+        }
+    })
+
+</script>
+</body>
+</html>
