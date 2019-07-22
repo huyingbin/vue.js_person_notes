@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2f7dbd1-5a77-42ef-bdd1-c8cf0bd710d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/18.品牌列表案例实现_自定义按键修饰符.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/19.品牌列表——自定义全局指令获取关键词焦点.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/17.品牌列表案例实现_私有过滤器.html" afterPath="$PROJECT_DIR$/17.品牌列表案例实现_私有过滤器.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,16 +20,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="12.v-show与v-if指令的学习.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/12.v-show与v-if指令的学习.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="13.第一天课程总结.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/13.第一天课程总结.txt">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,8 +53,8 @@
       <file leaf-file-name="17.品牌列表案例实现_私有过滤器.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/17.品牌列表案例实现_私有过滤器.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="154" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="166" selection-end-column="7" />
+            <state relative-caret-position="1741">
+              <caret line="158" column="28" lean-forward="false" selection-start-line="158" selection-start-column="28" selection-end-line="158" selection-end-column="28" />
               <folding>
                 <element signature="e#2091#3845#0" expanded="false" />
               </folding>
@@ -73,11 +62,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="18.品牌列表案例实现_自定义按键修饰符.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="19.品牌列表——自定义全局指令获取关键词焦点.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/19.品牌列表——自定义全局指令获取关键词焦点.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="68" column="32" lean-forward="false" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+              <folding>
+                <element signature="e#2854#4608#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="18.品牌列表案例实现_自定义按键修饰符.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/18.品牌列表案例实现_自定义按键修饰符.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="364">
+              <caret line="83" column="33" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="170" selection-end-column="7" />
               <folding>
                 <element signature="e#2272#4026#0" expanded="false" />
               </folding>
@@ -108,7 +109,7 @@
       <file leaf-file-name="15.过滤器的使用.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/15.过滤器的使用.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
+            <state relative-caret-position="166">
               <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
               <folding />
             </state>
@@ -163,6 +164,7 @@
         <option value="$PROJECT_DIR$/16.品牌列表案例实现_日期格式化.html" />
         <option value="$PROJECT_DIR$/17.品牌列表案例实现_私有过滤器.html" />
         <option value="$PROJECT_DIR$/18.品牌列表案例实现_自定义按键修饰符.html" />
+        <option value="$PROJECT_DIR$/19.自定义全局指令使文本框获取焦点.html" />
       </list>
     </option>
   </component>
@@ -261,12 +263,12 @@
       <workItem from="1514764889402" duration="459000" />
       <workItem from="1563496493995" duration="8429000" />
       <workItem from="1563598516387" duration="1136000" />
-      <workItem from="1563613291340" duration="12316000" />
+      <workItem from="1563613291340" duration="15760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47796000" />
+    <option name="totallyTimeSpent" value="51240000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -632,14 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/15.过滤器的使用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -664,10 +658,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/15.过滤器的使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/17.品牌列表案例实现_私有过滤器.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="154" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="166" selection-end-column="7" />
+        <state relative-caret-position="1741">
+          <caret line="158" column="28" lean-forward="false" selection-start-line="158" selection-start-column="28" selection-end-line="158" selection-end-column="28" />
           <folding>
             <element signature="e#2091#3845#0" expanded="false" />
           </folding>
@@ -676,10 +678,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/18.品牌列表案例实现_自定义按键修饰符.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="364">
+          <caret line="83" column="33" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="170" selection-end-column="7" />
           <folding>
             <element signature="e#2272#4026#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/19.品牌列表——自定义全局指令获取关键词焦点.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="68" column="32" lean-forward="false" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+          <folding>
+            <element signature="e#2854#4608#0" expanded="false" />
           </folding>
         </state>
       </provider>
