@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件切换——第一种方式-登陆注册</title>
+    <!--注意这种方式比较适合  两个框的改变-->
+</head>
+<body>
+<div id="app">
+    <a href="" @click.prevent="flag=true">登陆</a>
+    <a href="" @click.prevent="flag=false">注册</a>
+
+    <landing v-if="flag"></landing>
+    <registered v-else></registered>
+
+</div>
+<script src="./lib/Vue.js"></script>
+<script>
+<!--登陆组件-->
+    Vue.component('landing',{
+        template:"<h1>登陆窗口</h1>"
+    });
+//注册组件
+    Vue.component('registered',{
+        template:"<h1>注册窗口</h1>"
+    });
+
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            flag:true
+        }
+    })
+</script>
+</body>
+</html>
