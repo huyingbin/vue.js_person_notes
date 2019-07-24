@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件切换-第二种方式-component</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" value="登陆" @click.prevent="comName='landing'">
+    <input type="button" value="注册" @click.prevent="comName='registered'">
+    <!--component 用来展示对应名称的组件-->
+    <!--component是站位符，：s属性可以指定要展示组件的名称-->
+    <component :is="comName"></component>
+
+</div>
+<script src="./lib/Vue.js"></script>
+<script>
+    Vue.component('landing',{
+        template:"<h1>登陆界面</h1>"
+    });
+    Vue.component("registered",{
+        template:"<h1>注册界面</h1>"
+    });
+
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            comName:'landing'
+        },
+        methods:{}
+    })
+
+</script>
+</body>
+</html>
