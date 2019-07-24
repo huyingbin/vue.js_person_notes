@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2f7dbd1-5a77-42ef-bdd1-c8cf0bd710d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/33.组件切换-第二种方式-component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/34.父组件向子组件传值.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,28 +20,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="20.定义私有指令.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/20.定义私有指令.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="17.品牌列表案例实现_私有过滤器.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/17.品牌列表案例实现_私有过滤器.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="48" column="43" lean-forward="false" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="43" />
-              <folding>
-                <element signature="e#2091#3845#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="21. Vue实例的生命周期函数.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/21. Vue实例的生命周期函数.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -57,16 +35,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
               <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="15.过滤器的使用.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/15.过滤器的使用.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -95,18 +63,48 @@
       <file leaf-file-name="32.组件切换——第一种方式-登陆注册.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/32.组件切换——第一种方式-登陆注册.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
+            <state relative-caret-position="384">
               <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="33.组件切换-第二种方式-component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="33.组件切换-第二种方式-component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/33.组件切换-第二种方式-component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+            <state relative-caret-position="456">
+              <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="34.父组件向子组件传值.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/34.父组件向子组件传值.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="32" column="81" lean-forward="false" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="04.v-bind指令的学习.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/04.v-bind指令的学习.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="28.组件创建的第二种方式.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/28.组件创建的第二种方式.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="62" lean-forward="false" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -115,7 +113,7 @@
       <file leaf-file-name="30.定义私有组件.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/30.定义私有组件.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
+            <state relative-caret-position="123">
               <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding />
             </state>
@@ -187,6 +185,7 @@
         <option value="$PROJECT_DIR$/31.组件中的data和methods.html" />
         <option value="$PROJECT_DIR$/32.组件切换——第一种方式-登陆注册.html" />
         <option value="$PROJECT_DIR$/33.组件切换-第二种方式-component.html" />
+        <option value="$PROJECT_DIR$/34.父组件向子组件传值.html" />
       </list>
     </option>
   </component>
@@ -286,12 +285,12 @@
       <workItem from="1563496493995" duration="8429000" />
       <workItem from="1563598516387" duration="1136000" />
       <workItem from="1563613291340" duration="23577000" />
-      <workItem from="1563806747814" duration="24658000" />
+      <workItem from="1563806747814" duration="27238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83715000" />
+    <option name="totallyTimeSpent" value="86295000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,14 +361,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/10.v-for指令的学习.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/11.v-for指令中的key问题.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -512,14 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04.v-bind指令的学习.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -675,14 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/28.组件创建的第二种方式.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="62" lean-forward="false" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/17.品牌列表案例实现_私有过滤器.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -717,26 +692,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/29.组件创建的第三种方式.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/06.跑马灯效果.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="633">
           <caret line="57" column="14" lean-forward="false" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/30.定义私有组件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -749,18 +708,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/33.组件切换-第二种方式-component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/30.定义私有组件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/28.组件创建的第二种方式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="62" lean-forward="false" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/29.组件创建的第三种方式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/32.组件切换——第一种方式-登陆注册.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
+        <state relative-caret-position="384">
           <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/33.组件切换-第二种方式-component.html">
+    <entry file="file://$PROJECT_DIR$/04.v-bind指令的学习.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="190">
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/34.父组件向子组件传值.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="32" column="81" lean-forward="false" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
           <folding />
         </state>
       </provider>

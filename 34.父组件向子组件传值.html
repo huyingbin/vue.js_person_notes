@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父组件向子组件传值</title>
+</head>
+<body>
+<div id="app">
+    <!--父组件，可以在引用子组件的时候，通过属性绑定的形式，把需要传递给子组件的数据传递到子组件内部-->
+    <!--父组件如果向子组件传值，用bind的时候，如果用驼峰命名，子组件接收值变量全部小写。-->
+    <my-com v-bind:fatherToSon="msg"></my-com>
+</div>
+
+<!--定义组件myCom的模板-->
+<template id="myTemplate">
+    <!--子组件内默认无法访问父组件的数据和methods-->
+    <h1>这是父组件向子组件传的值：{{fathertoson}}</h1>
+</template>
+
+<script src="./lib/Vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data:{
+            msg:123
+        },
+        components:{
+            myCom:{
+                template:"#myTemplate",
+//                注意，props内的数据都是通过父组件传递到子组件的
+//                props内的数据只是可读的
+                props:['fathertoson'],// 把父组件传递过来的fathertoson属性，在数组中定义一下，这样子组件才能使用
+//                注意》子组件内的data数据并不是父组件传递过来的，而是子组件有的，比如：子组件通过ajax请求回来的数据可以放到data中。
+                data:{}
+
+            }
+
+        }
+    })
+</script>
+</body>
+</html>
