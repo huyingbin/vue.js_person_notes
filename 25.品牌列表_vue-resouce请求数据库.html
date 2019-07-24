@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>品牌列表案例实现</title>
+    <link rel="stylesheet" href="./lib/bootstrap.css">
+</head>
+<body>
+<div id="app">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">增加车辆 </h3>
+        </div>
+
+        <div class="panel-body">
+            <label>
+                ID:
+                <input type="text" v-model="id">
+            </label>
+            <label>
+                名称:
+                <!--<input type="text" v-model="name" @keyup.enter="add">-->
+                <!--自定义按键修饰符-->
+                <input type="text" v-model="name" @keyup.F2="add">
+            </label>
+
+            <input type="button" value="增加" class="btn btn-primary" @click="add()">
+
+            <label>
+                根据关键词搜索:
+                <input type="text" v-model="keyWord" v-focus v-color="'green'">
+            </label>
+
+
+        </div>
+    </div>
+
+    <table class="table table-hover table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>名称</th>
+            <th>时间</th>
+            <th>删除</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="car in search(keyWord)" :key="car.id">
+            <td>{{car.id}}</td>
+            <td v-text="car.name"></td>
+            <td>{{car.ctime|dateFormat}}</td>
+            <td><a href="#" @click.prevent="del(car.id)">删除</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<script src="./lib/Vue.js"></script>
+<script src="./lib/vue-resource.js"></script>
+<script>
+    <!--设置全局根api路径https://github.com/pagekit/vue-resource/blob/HEAD/docs/config.md-->
+    Vue.http.options.root = 'http://www.liulongbin.top:3005';
+//    post 请求配置
+    Vue.http.options.emulateJSON = true;
+
+
+    //  自定义全局指令获取焦点
+    /*
+    * 使用Vue.directive()定义全局的指令
+    * 其中：参数1：指令的名称，在定义时指令前面不加v-前缀，但是使用指令时，需要添加v-前缀
+    *      参数2：是一个对象，在这个对象里是一些指令函数，这些函数可以在特定的阶段，执行相关的操作
+    *
+    * */
+    Vue.directive('focus',{
+//        注意：在每个指令函数中第一个参数是指定绑定的元素el,这个el是js对象。
+
+//       bind:function (el) {  每当指令绑定到元素上时会被执行，只执行一次
+//    ？    此时元素还没有渲染到页面上，这时绑定focus并没作用
+//            el.focus();
+//       },
+
+//        元素插入到dom时，会执行此函数，只执行一次
+        inserted:function (el) {
+            el.focus();
+        },
+//        updated:function (el) {//当VNode更新的时候，会执行updated，可能会触发多次
+//            el.focus();
+//
+//        }
+    });
+
+    Vue.directive('color',{
+//        样式，只要指令绑定了元素，不管这个元素有没有插到dom中，都可以显示
+        bind:function (el, binding) {
+            console.log(binding.name);
+            console.log(binding.value);
+            console.log(binding.expression);
+            el.style.color=binding.value;
+
+        }
+    })
+    <!--自定义全局按键修饰符-->
+    Vue.config.keyCodes.F2 = 113;
+    Vue.filter('dateFormat',function (date) {
+//        根据日期字符串，得到特定的时间
+        var time = new Date(date);
+//        年
+        var year = time.getFullYear();
+
+//        月
+        var month = time.getMonth();
+
+//        日
+        var date = time.getDate();
+//        模板字符串，注意两边不是引号，是键盘左上角和~一个键。
+        return `${year} - ${month} - ${date}`;
+
+
+    })
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            id:'',
+            name:'',
+            keyWord:'',// 根据关键词搜索
+            carLists:[
+                {id:1,name:"大众",createTime:new Date(),Operation:"删除"},
+                {id:2,name:"奥拓",createTime:new Date(),Operation:"删除"}
+
+            ]
+        },
+
+        methods:{
+
+//            1. 获取id和name
+//            2.拼接成对象，加到carLists中
+//            3.注意：在vue中已经实现了数据的双向绑定，每当我们修改data中的数据，Vue
+//            会默认监听到数据的变动，自动渲染到界面上
+            add(){
+//                var newCar = {id:this.id,name:this.name,createTime:new Date(),Operation:"删除"} ;
+//                this.carLists.push(newCar);
+////                输入框为空
+//                this.id = '';
+//                this.name = '';
+                console.log("新填："+name);
+                this.$http.post("api/addproduct",{name: this.name}).then(result=>{
+                    console.log(result.body.status);
+//                    添加成功后，请求数据
+                    if(result.body.status==0){
+                        this.getCarlist();
+                    }else{
+                        alert("添加错误。")
+                    }
+//
+                })
+
+            },
+            del(id){
+//                1.根据id找到相应对象
+//                2.从数组中删除该对象
+//                this.carLists.some((car,i)=>{
+//                    if(car.id == id){
+//                        this.carLists.splice(i,1);
+//                        return true;
+//                    }
+//                })
+
+//                var index = this.carLists.findIndex((car)=>{
+//                    if(car.id == id){
+//                        return true;
+//                    }
+//                });
+//                this.carLists.splice(index,1);
+
+                this.$http.get("api/delproduct/"+id).then(result=>{
+//                   删除成功后重新请求数据
+                    if(result.body.status==0) {
+                       this.getCarlist();
+
+                   } else {
+                        alert("删除失败");
+                    }
+
+                });
+
+            },
+            search:function (keyword) {
+//                1.遍历全部数据
+//                2.判断包括keyword的对象
+//                3. 返回符合对象的数组
+//                var newList = []
+//                this.carLists.forEach(function (car) {
+//                    if(car.name.indexOf(keyword)!=-1){
+//                        newList.push(car)
+//                    }
+//
+//                })
+//                return newList;
+
+//                filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素
+                return this.carLists.filter((car)=>{
+//在ES6中，为字符串提供一个新的方法，String.prototype.includes('要包含合法的字符串')，如果包含就返回true,
+//                    如果不包含返回false
+                    if(car.name.includes(keyword)){
+                        return car;
+                    }
+                });
+
+            },
+            getCarlist:function () {
+                //  获取车辆列表
+                this.$http.get("api/getprodlist").then(result=>{
+                    this.carLists = result.body.message;
+                    console.log("3333333");
+                },result=>{
+                    alert("请求错误");
+
+                });
+
+            }
+        },
+
+//        //        第二个生命周期函数，data和methods中的方法都被初始化完成
+        created:function () {
+            this.getCarlist();
+        },
+
+
+//        定义私有过滤器， 过滤器名称，函数
+        filters:{
+            dateFormat:function (date) {
+//                将字符串转化为时间
+                var time = new Date(date);
+                var year = time.getFullYear();
+//                padStart(len, str)
+//                根据给定长度在字符串的前面增加想增加的字符
+//                len:给定的长度，转换后
+//                str:想补充的字符串
+                var month = time.getMonth()+1;
+                month = month.toString().padStart(2,'0');
+                var day = time.getDate().toString().padStart(2,'0');;
+
+                var hour = time.getHours().toString().padStart(2,'0');;
+                var minute = time.getMinutes().toString().padStart(2,'0');;
+                var second = time.getSeconds().toString().padStart(2,'0');;
+                return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+
+            }
+
+        }
+    })
+</script>
+</body>
+</html>
