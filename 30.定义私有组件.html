@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定义私有组件</title>
+</head>
+<body>
+<div id="app">
+    <my-component-one></my-component-one>
+
+
+    <my-component></my-component>
+
+</div>
+
+<div id="appTwo">
+    <my-component></my-component>
+</div>
+
+<template id="mytTemplate">
+    <div>
+        <h2>定义私有组件</h2>
+    </div>
+</template>
+<script src="./lib/Vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data:{},
+        methods:{},
+        filters:{},
+        directives:{},
+        components:{
+//            第一种方式  不将template抽离出来，书写不方便
+            myComponentOne:{
+                template:"<h1>不将template抽离出来，书写不方便</h1>"
+            },
+//            第二种方式  定义私有组件
+            myComponent:{
+                template:"#mytTemplate"
+            }
+
+        },
+
+        beforeCreate:function () {
+
+        },
+        created(){},
+        beforeMount(){},
+        mounted(){},
+        beforeUpdate(){},
+        updated(){},
+        beforeDestroy(){},
+        destroyed(){}
+    });
+
+    var vmT = new Vue({
+        el: "#appTwo",
+    })
+</script>
+</body>
+</html>
