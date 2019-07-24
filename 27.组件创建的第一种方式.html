@@ -11,6 +11,9 @@
     <extend-component></extend-component>
     <!--如果组件没有采用驼峰命名法，直接以名字引用即可-->
     <extendcomponent></extendcomponent>
+
+
+    <my-component></my-component>
 </div>
 <script src="./lib/Vue.js"></script>
 <script>
@@ -23,6 +26,12 @@
     Vue.component('extendComponent',extendConstructor);
 
     Vue.component('extendcomponent',extendConstructor);
+
+
+//    可以将上边两步合成一步，来创建全局组件
+    Vue.component('myComponent',Vue.extend({
+        template:'<h2>合成一步来创建全局组件</h2>'
+    }))
 
     var vm = new Vue({
         el: "#app"

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建组件的第二种方式</title>
+</head>
+<body>
+<div id="app">
+    <my-component></my-component>
+</div>
+<script src="./lib/Vue.js"></script>
+<script>
+    <!--这种方式：第二个参数传递一个对象-->
+    Vue.component('myComponent',{
+//        注意：无论哪种方式创建出来的组件，组件的tempalte属性指向的模板内容，必须有且只有唯一的一个根元素
+//        template:'<h3>这是直接用Vue,component创建出来的组件</h3><span>123</span>'
+        template:'<div>' +
+        '<h3>这是直接用Vue,component创建出来的组件</h3><span>123</span>' +
+        '</div>'
+
+    })
+    var vm = new Vue({
+        el: "#app",
+
+    })
+</script>
+</body>
+</html>
