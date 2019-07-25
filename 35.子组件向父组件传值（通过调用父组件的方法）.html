@@ -1,0 +1,63 @@
+<!--子组件向父组件传递方法：
+    1.在父组件上定义一个方法，如果要传值，就要加参数
+    2.通过事件绑定将方法绑定给子组件
+    3.在子组件中使用this.$emit(方法属性名,要传递的值);
+    4.在父组件方法中接受到参数，传递给data
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子组件向父组件传值——通过调用父组件的方法</title>
+</head>
+<body>
+<div id="app">
+    <com @funcE = 'getSonValue'></com>
+
+</div>
+<template id="comTemplate">
+    <div>
+        <p>这是com组件。</p>
+        <input type="button" value="向父组件赋值" @click="clickBtn">
+    </div>
+</template>
+<script src="./lib/Vue.js"></script>
+<script>
+    var com = {
+        template:"#comTemplate",
+        data:function () {
+            return {
+                msg:"这是子组件的数据",
+                msgObj:{
+                    name:"齐天大圣",
+                    age:500
+                }
+            }
+        },
+        methods:{
+            clickBtn(){
+//                this.fatherEvent();
+//                $emit触发的意思
+                this.$emit('funce',this.msg,this.msgObj);
+            }
+
+        }
+
+    };
+    var vm = new Vue({
+        el:"#app",
+        components:{
+            com
+        },
+        methods:{
+            getSonValue(data,data1){
+                console.log("这是父组件的方法:"+data+":"+data1.name);
+
+            }
+        }
+
+    });
+</script>
+</body>
+</html>
