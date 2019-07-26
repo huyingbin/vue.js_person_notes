@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用ref获取dom元素和组件</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" value="元素" @click="getElement">
+
+    <h3 ref="element">使用ref</h3>
+
+    <component ref="myCom"></component>
+
+
+</div>
+
+<template id="myTem">
+    <div>这是子组件</div>
+</template>
+
+<script src="./lib/Vue.js"></script>
+<script>
+    var component = {
+        template:'#myTem',
+        data:function () {
+            return {
+                msg:"这是子组件内的数据"
+            }
+        },
+        methods:{
+            consoleMsg(){
+                console.log("这是子组件内的方法")
+            }
+        }
+    };
+    var vm = new Vue({
+        el: "#app",
+        methods:{
+            getElement(number){
+                console.log(this.$refs.element.innerText);
+//                通过 $refs 可以调用组件内的数据和方法
+                console.log(this.$refs.myCom.msg);
+                this.$refs.myCom.consoleMsg();
+            }
+        },
+        components:{
+            component
+        }
+
+    })
+
+</script>
+</body>
+</html>
