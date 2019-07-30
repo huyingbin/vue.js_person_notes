@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>路由的基本使用</title>
+    <style>
+        .activeLink{
+            font-weight: 800;
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--默认显示第一个 路由指示的组件  不推荐-->
+    <!--<a href="#/login">登陆</a>-->
+    <!--<a href="#/register">注册</a>-->
+
+    <!--使用router-link的vue-link来实现-->
+    <!--to 匹配相应的路由连接地址-->
+    <!--tag 指定渲染的类别-->
+    <router-link to="/login" tag="button">登陆</router-link>
+    <router-link to="/register">注册</router-link>
+
+
+
+    <!--outer-view是路由vue-router提供的元素，专门用来当做占位符-->
+    <router-view></router-view>
+</div>
+
+<template id="loginTem">
+    <h2>登陆插件</h2>
+</template>
+
+<template id="registerTem">
+    <h2>注册插件</h2>
+</template>
+
+<script src="./lib/Vue.js"></script>
+<script src="./lib/vue-router.js"></script>
+<script>
+
+
+    var login = {
+        template:"#loginTem"
+    }
+
+    var register = {
+        template:"#registerTem"
+    }
+
+//    创建一个路由对象，当导入vue-router之后，在window对象中，就有了一个路由的构造函数叫做VueRouter,
+//    在new 路由对象时，可以为构造函数传递一个配置对象
+    var routerObj = new VueRouter({
+        routes:[
+//            每一个路由规则都是一个对象，这个规则对象必须有两个属性
+//            属性1：path表示监听那个路由连接地址
+//            属性2：component 表示如果路由是前面匹配到的path,则展示component属性对应的组件
+
+//            注意 component 的值必须是一个组件的模板对象，不能是组件的引用名字
+//            redirect 路由重定向，默认指向登陆按钮
+            {path:"/",redirect:'/login'},
+            {path:'/login',component:login},
+            {path:'/register',component:register}
+
+        ],
+//    配置激活连接，默认：router-link-active
+        linkActiveClass:"activeLink"
+    });
+    var vm = new Vue({
+        el: "#app",
+
+//  将路由规则对象， 注册到vm实例上，用来监听url地址的变化，然后展示对应的组件
+        router:routerObj
+    })
+
+</script>
+</body>
+</html>
