@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <router-link to="/login?id=10">登陆</router-link>
+    <router-link to="/register">注册</router-link>
+    <router-view></router-view>
+
+</div>
+
+
+<template id="loginTem">
+        <h2>登陆插件---{{ $route.query.id }}</h2>
+</template>
+
+
+<template id="registerTem">
+        <h2>注册插件</h2>
+</template>
+
+<script src="./lib/Vue.js"></script>
+<script src="./lib/vue-router.js"></script>
+<script>
+
+    var login = {
+        template:"#loginTem",
+        created() {
+            // 通过 $route.query 获取传递的参数
+            console.log(this.$route.query.id);
+        },
+    }
+
+    var register = {
+        template:"#registerTem"
+    } 
+
+    var routerObj = new VueRouter({
+        routes:[
+            {path:"/", redirect:'/login'},
+            {path: "/login", component: login},
+            {path: "/register", component: register}
+        ],
+        
+    })
+
+    
+
+    var vm = new Vue({
+        el: "#app",
+        router:routerObj
+
+    })
+
+</script>
+</body>
+</html>

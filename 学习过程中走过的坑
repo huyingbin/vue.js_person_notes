@@ -1,0 +1,11 @@
+
+var routerObj = new VueRouter({
+        routes:[
+            {path:"/", redirect:'/login'},
+            {path: "/login", component: login},
+            {path: "/register", component: register}
+        ],
+        
+    })
+
+上边的 routes 写成了 routers 多了r
